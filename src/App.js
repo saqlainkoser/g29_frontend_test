@@ -15,7 +15,7 @@ function App() {
 
   const fetchMessage = async () => {
     try {
-      const response = await fetch('http://localhost:5005/api/hello');
+      const response = await fetch('https://g29-backend-test.onrender.com/api/hello');
       const data = await response.json();
       setMessage(data.message);
     } catch (error) {
@@ -29,7 +29,7 @@ function App() {
     setLoading(true);
     
     try {
-      const response = await fetch('http://localhost:5005/api/greet', {
+      const response = await fetch('https://g29-backend-test.onrender.com/api/greet', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
